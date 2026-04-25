@@ -17,6 +17,8 @@ Converts text into vectors using TF-IDF
 Calculates similarity using Cosine Similarity
 Displays ATS score and missing keywords
 
+live link :- https://smart-resume-ats-checker.onrender.com
+
 🛠️ Tech Stack
 Python
 Flask
