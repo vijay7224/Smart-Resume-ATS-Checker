@@ -1,0 +1,6 @@
+Flask
+PyPDF2
+scikit-learn
+numpy
+pandas
+gunicorn
