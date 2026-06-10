@@ -18,7 +18,7 @@ app.secret_key = "secretkey123"
 # MongoDB Connection
 # =====================================
 
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb+srv://vijaysuryawanshi7224_db_user:vijay%402005@cluster0.ckvnjfm.mongodb.net/collegedb?retryWrites=true&w=majority")
 
 db = client["resume_analyzer"]
 
