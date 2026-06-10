@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer - Get Hired Faster</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --gradient: linear-gradient(135deg, #0d6efd, #6610f2, #9c40ff);
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover;
+            opacity: 0.15;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .hero .lead {
+            font-size: 1.35rem;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .feature-card {
+            transition: all 0.4s ease;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(13, 110, 253, 0.2);
+        }
+
+        .stats {
+            background: #f8f9fa;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .testimonial-card {
+            border-left: 5px solid var(--primary);
+        }
+
+        .cta-section {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .footer {
+            background: #212529;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#">
+            <i class="fas fa-robot me-2"></i>ResumeAI
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#how">How it Works</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                <li class="nav-item">
+                    <a class="btn btn-light ms-3 px-4" href="/register">Get Started Free</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero text-center">
+    <div class="container position-relative">
+        <h1 class="mb-4">Land Your Dream Job with <span class="text-warning">AI</span></h1>
+        <p class="lead">Upload your resume and get instant ATS scoring, skill gap analysis, and personalized improvement suggestions.</p>
+        
+        <div class="mt-5">
+            <a href="/register" class="btn btn-light btn-lg px-5 py-3 me-3 fw-semibold">
+                <i class="fas fa-upload me-2"></i> Analyze My Resume
+            </a>
+            <a href="#how" class="btn btn-outline-light btn-lg px-5 py-3 fw-semibold">
+                How it Works
+            </a>
+        </div>
+
+        <div class="mt-5 text-muted small">
+            ✅ Trusted by 10,000+ job seekers • <span class="text-white">98% accuracy</span>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section id="features" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 display-5 fw-bold">Powerful Features</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card feature-card p-4 h-100 text-center">
+                    <div class="mb-4 text-primary fs-1">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h4>Smart Resume Parsing</h4>
+                    <p class="text-muted">Extracts education, experience, skills, and achievements with high accuracy from PDF, DOCX & TXT.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card feature-card p-4 h-100 text-center">
+                    <div class="mb-4 text-primary fs-1">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4>ATS Score</h4>
+                    <p class="text-muted">Get a real-time ATS compatibility score with detailed breakdown and improvement tips.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card feature-card p-4 h-100 text-center">
+                    <div class="mb-4 text-primary fs-1">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>Skill Gap Analysis</h4>
+                    <p class="text-muted">Compares your resume with job descriptions and highlights missing keywords & skills.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it Works -->
+<section id="how" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 display-5 fw-bold">How It Works</h2>
+        
+        <div class="row text-center">
+            <div class="col-md-4 mb-5">
+                <div class="mb-4">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px; font-size: 2rem;">
+                        1
+                    </div>
+                </div>
+                <h5>Upload Resume</h5>
+                <p>Drag & drop or upload your resume in any common format.</p>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="mb-4">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px; font-size: 2rem;">
+                        2
+                    </div>
+                </div>
+                <h5>Paste Job Description</h5>
+                <p>Optional: Add the job description for personalized analysis.</p>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="mb-4">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px; font-size: 2rem;">
+                        3
+                    </div>
+                </div>
+                <h5>Get Insights</h5>
+                <p>Receive detailed report with score, improvements & AI suggestions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Users Say</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card testimonial-card p-4 h-100">
+                    <p class="fst-italic">"Got 3 interview calls within a week after using this tool. The suggestions were spot on!"</p>
+                    <div class="mt-auto">
+                        <strong>Rahul Sharma</strong><br>
+                        <small class="text-muted">Software Engineer @ Google</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card testimonial-card p-4 h-100">
+                    <p class="fst-italic">"The ATS score feature helped me optimize my resume perfectly. Highly recommended!"</p>
+                    <div class="mt-auto">
+                        <strong>Priya Patel</strong><br>
+                        <small class="text-muted">Product Manager</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card testimonial-card p-4 h-100">
+                    <p class="fst-italic">"Saved me so much time. The skill gap analysis is incredibly detailed."</p>
+                    <div class="mt-auto">
+                        <strong>Akash Verma</strong><br>
+                        <small class="text-muted">Data Scientist</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-section py-5 text-center">
+    <div class="container">
+        <h2 class="display-5 fw-bold mb-4">Ready to Boost Your Career?</h2>
+        <p class="lead mb-4">Join thousands of job seekers who improved their resume with AI.</p>
+        <a href="/register" class="btn btn-light btn-lg px-5 py-3 fw-bold fs-5">
+            Start Free Analysis Now →
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5><i class="fas fa-robot"></i> ResumeAI</h5>
+                <p class="small">Helping job seekers land better opportunities through intelligent resume analysis.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="small mb-0">
+                    © 2026 AI Resume Analyzer • Built with ❤️ using Flask & MongoDB
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
